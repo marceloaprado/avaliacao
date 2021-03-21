@@ -148,3 +148,5 @@ No console, serão exibidos os logs do Postgres sendo iniciado. Caso não queira
 - O passo anterior pode ser replicado na sua IDE de preferência também.
 
 Feito isso, é possível acessar aplicação localmente no endereço http://localhost:8080/.
+
+A resolução deste desafio encontra-se no projeto [**exercicio5**](https://github.com/marceloaprado/avaliacao/tree/main/exercicio5)
