@@ -1,0 +1,84 @@
+.cards-container {    
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0px 30px 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30%;
+    min-width: 250px;    
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto';
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    border-radius: 4px;
+    cursor: pointer;
+    border-left: #4c62d6 solid 7px;
+    margin: 30px;
+}
+
+.card-title {
+    display: flex;
+    font-size: 18px;
+    margin-top: 20px;
+    align-items: center;
+
+    .mat-icon {
+        margin-left: 15px;
+    }
+}
+
+.card:hover {    
+    background-color :#f5f5f5;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    flex: 1;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    text-align: start;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card-list-item {
+    font-size: 18px;
+    height: 10px;
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+    align-items: center;
+    margin: 10px;
+    background-color: #dadada;
+
+    .value {
+        font-weight: bold;
+        margin-left: 15px;
+    }
+}
+
+.card-content > span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.alert-container {
+    padding: 10px 10px 1px 10px;
+}
+
+table td {
+    text-align: left;
+    word-break: break-all;
+}

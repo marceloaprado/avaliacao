@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>br.com.tinnova</groupId>
+		<artifactId>avaliacao</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
+	<groupId>br.com.tinnova.avaliacao.exercicio5</groupId>
+	<artifactId>exercicio5</artifactId>
+	<name>exercicio5</name>
+	<description>Aplicação backend Spring Boot com Angular para gerenciamento de veículos</description>
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>exercicio5-web</module>
+		<module>exercicio5-api</module>
+	</modules>
+</project>

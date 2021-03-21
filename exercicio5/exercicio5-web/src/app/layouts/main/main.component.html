@@ -1,0 +1,36 @@
+<div class="container-toolbar" [class.container-mobile]="mobileQuery.matches">
+  <mat-toolbar class="main-toolbar">
+    <button mat-icon-button class="large" (click)="snav.toggle()" matRipple matRippleCentered="true">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="div-img-logo center fill-remaining-space">
+      
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container" autosize="false" [style.marginTop.px]="mobileQuery.matches ? 80 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="80">
+      <mat-nav-list>
+        <mat-card class="center welcome">Bem vindo!</mat-card>
+        <mat-accordion>
+          <mat-expansion-panel id="expansion-panel" (opened)="onMenuItemClick('formulario')">
+            <mat-expansion-panel-header id="expansion-panel-header">
+              <mat-panel-title id="expansion-panel-title">
+                <i class="material-icons">directions_car_filled</i>
+                <!-- <mat-icon id="icon" matPrefix>settings</mat-icon> -->
+                Veículos
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <app-menu-item [id]="'menu-item['+menu.link+']'" *ngFor="let menu of currentMenu"
+              [menuItem]="menu"></app-menu-item>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <div class="sidenav-content center">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-container>
+</div>

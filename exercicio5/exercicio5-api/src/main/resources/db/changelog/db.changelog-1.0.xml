@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<databaseChangeLog  
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"  
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+		
+	<changeSet  id="changelog-1.0-create-tables"  author="marceloprado">
+		<comment>Criação de estrutura inicial das tabelas</comment>
+		<sqlFile  dbms="postgresql"
+            encoding="UTF-8"
+            endDelimiter=";"
+            path="../sql/00_CREATE_TABLES.sql"
+            relativeToChangelogFile="true"
+            splitStatements="true"
+            stripComments="true" />
+		<rollback>
+			<sqlFile  dbms="oracle"
+				encoding="UTF-8"
+				endDelimiter=";"
+				path="../sql/00_CREATE_TABLES_ROLLBACK.sql"
+				relativeToChangelogFile="true"
+				splitStatements="true"
+				stripComments="true" />
+		</rollback>
+	</changeSet>
+	
+	<changeSet  id="changelog-1.0-init-data"  author="marceloprado">
+		<comment>Inicializar dados das tabelas</comment>
+		<sqlFile  dbms="postgresql"
+            encoding="UTF-8"
+            endDelimiter=";"
+            path="../sql/01_INIT_DATA.sql"
+            relativeToChangelogFile="true"
+            splitStatements="true"
+            stripComments="true" />
+		<rollback>
+			<sqlFile  dbms="oracle"
+				encoding="UTF-8"
+				endDelimiter=";"
+				path="../sql/01_INIT_DATA_ROLLBACK.sql"
+				relativeToChangelogFile="true"
+				splitStatements="true"
+				stripComments="true" />
+		</rollback>
+	</changeSet>
+
+	<changeSet author="marceloprado" id="changelog-1.0-tag">
+        <tagDatabase tag="1.0" />
+    </changeSet>
+</databaseChangeLog>

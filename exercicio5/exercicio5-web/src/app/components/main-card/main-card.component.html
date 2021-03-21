@@ -1,0 +1,21 @@
+<div [class.main-content]="!modoDialog" tabindex="0" #sectionNeedToScroll>  
+  <div [class.main-card]="!modoDialog">
+    <ngx-loading [show]="showLoading"></ngx-loading>
+    <mat-toolbar *ngIf="!modoDialog">
+      <span>{{titulo}}</span>
+      <span *ngIf="modificado">*</span>
+      <span class="fill-remaining-space"></span>
+      
+      <button *ngIf="exibeBotaoAtualizar" matTooltip="Atualizar" mat-icon-button (click)="atualizar()">
+        <mat-icon aria-label="Atualizar">sync</mat-icon>
+      </button>
+
+      <button *ngIf="exibeBotaoFechar" matTooltip="Fechar página" mat-icon-button (click)="close()">
+        <mat-icon aria-label="Fechar pagina">close</mat-icon>
+      </button>
+    </mat-toolbar>
+    <ng-content>
+      
+    </ng-content>
+  </div>
+</div>

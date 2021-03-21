@@ -1,0 +1,240 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/theming";
+
+// Breakpoints
+$bp-tiny: 22.5em; // 360px
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-tiny: "(min-width: #{$bp-tiny})";
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+$mq-xlarge: "(min-width: #{$bp-xlarge})";
+$mq-xxlarge: "(min-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+$custom-typography: mat-typography-config(
+  $font-family: "Roboto",
+);
+@include mat-core($custom-typography);
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.main-content {
+  padding: 25px 25px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #fee0ea;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.center {
+  justify-content: center;
+  text-align: center;
+}
+
+.left {
+  justify-content: left;
+}
+
+.right {
+  justify-content: right;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.nofocus {
+  outline: none;
+}
+
+.quebraTexto {
+  word-wrap: break-word;
+}
+
+.alert {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  opacity: 1;
+  touch-action: auto !important;
+  user-select: auto !important;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  color: #3c763d;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+}
+
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bcdff1;
+  color: #31708f;
+}
+
+.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #faf2cc;
+  color: #8a6d3b;
+}
+
+.closebtn {
+  margin-left: 15px;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.fade {
+  transition: opacity 0.15s linear;
+}
+
+.form-content {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-row {
+  display: initial;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.form-group {
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  -webkit-flex-wrap: wrap;
+  /* Safari 6.1+ */
+  flex-wrap: wrap;
+}
+
+table {
+  width: 100%;
+}
+
+.form-field {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+}
+
+.flex-grow-2 {
+  flex-grow: 2;
+  -webkit-flex-grow: 2;
+}
+
+.flex-grow-3 {
+  flex-grow: 3;
+  -webkit-flex-grow: 3;
+}
+
+.flex-grow-4 {
+  flex-grow: 4;
+  -webkit-flex-grow: 4;
+}
+
+.flex-grow-5 {
+  flex-grow: 5;
+  -webkit-flex-grow: 5;
+}
+
+.mat-expansion-panel-body {
+  padding: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Roboto";
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.mat-selection-list, .mat-list-item[aria-disabled='true'] {
+  outline: none;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: rgba(0,0,0, 0);
+}
+
+.mg-top-15 {
+  margin-top: 15px;
+}
+
+.pd-bt-15 {
+  padding-bottom: 15px;
+}
+
+.mg-top-30 {
+  margin-top: 30px;
+}
+
+.aleft {
+  text-align: left;
+}
+
+.hide {
+  display: none !important;
+}

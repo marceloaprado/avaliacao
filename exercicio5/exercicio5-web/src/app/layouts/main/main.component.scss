@@ -1,0 +1,157 @@
+@import "~@angular/material/theming";
+
+.sidenav-content {
+  overflow: auto;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+
+.sidenav {
+  padding: 20px;
+}
+
+.itemMenu {
+  margin-right: 0px !important;
+  padding-right: 0px !important;
+}
+
+.mat-icon-button.large {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+
+  .mat-icon {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+  }
+}
+
+.div-img-logo {
+  display: flex;
+  height: 80px;
+
+  img {
+    height: 80px;
+    width: auto;
+    margin: 0 !important;
+  }
+}
+
+.mat-toolbar {
+  background-color: #4c62d6;
+  color: #fff;
+  margin-top: 0;
+  height: 80px;
+}
+
+button:focus {
+  outline: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.mat-menu-content {
+  a,
+  a:hover {
+    text-decoration: none !important;
+  }
+}
+
+.mat-nav-list {
+  padding: 0;
+  background-color: #4c62d6 !important;
+
+  .material-icons {
+    padding-right: 0px !important;
+    margin-right: 16px;
+  }
+}
+
+.welcome {
+  font-size: 16pt;
+}
+
+mat-card {
+  background-color: #4c62d6;
+  color: white;
+  border-radius: 0px;
+  box-shadow: unset !important;
+}
+
+.mat-expansion-panel-header {
+  background-color: #4c62d6;
+  padding: 0 24px 0 10px !important;
+}
+
+mat-list-item {
+  .material-icons {
+    margin-right: 10px !important;
+  }
+}
+
+.mat-expansion-panel-header-title {  
+  color: white;
+  font: 400 16px/20px Roboto, monospace;
+}
+
+.mat-expansion-panel-header:focus,
+.mat-expansion-panel-header:hover {
+  background-color: #8494e6 !important;
+  @include mat-elevation(3);
+}
+
+.toolbar-header {
+  display: flex;
+  flex-direction: column !important;
+}
+
+.toolbar-title {
+  font: 500 20px/32px Roboto, monospace;
+  padding: 0 16px;
+  height: 25px;
+}
+
+.toolbar-subtitle {
+  color: #ffffffb5;
+  font: normal 16px/32px Roboto, monospace;
+  height: 25px;
+  padding: 0 16px;
+}
+
+mat-toolbar {
+  color: white;
+
+  .material-icons {
+    padding-right: 0px !important;
+    color: white;
+  }
+}
+
+.container-toolbar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.container-mobile .main-toolbar {
+  position: fixed;
+  z-index: 2;
+}
+
+.container-mobile .sidenav-container {
+  flex: 1 0 auto;
+}
+
+.sidenav-container {
+  flex: 1;
+}
+
+mat-sidenav {
+  width: 240px;
+}

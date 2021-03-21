@@ -1,0 +1,4 @@
+﻿<div [@fadeInOut] *ngFor="let alert of alerts" class="quebraTexto {{ cssClass(alert) }} alert-dismissable mat-typography">
+    <span class="closebtn" (click)="removeAlert(alert)">&times;</span> 
+    <span>{{alert.message}}</span>
+</div>

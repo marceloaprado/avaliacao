@@ -1,0 +1,7 @@
+<h2 class="mat-dialog-title-error" mat-dialog-title>{{ data.errorMessageData.title }}</h2>
+<div id="div_error" mat-dialog-content class="mat-typography">
+  {{ data.errorMessageData.body }}
+</div>
+<mat-dialog-actions class="actions center">
+  <button id="button_close_error" mat-button [mat-dialog-close]="true">OK</button>
+</mat-dialog-actions>

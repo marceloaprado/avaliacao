@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>br.com.tinnova.avaliacao.exercicio5</groupId>
+		<artifactId>exercicio5</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>exercicio5-web</artifactId>
+	<name>exercicio5-web</name>
+	<description>Single Page Application com Angular para gerenciamento de veículos</description>
+	
+	<properties>
+    <node-version>v10.16.0</node-version>
+    <npm-version>6.9.0</npm-version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <!-- Frontend Maven Plugin configuration -->
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>1.8.0</version>
+        <configuration>
+          <nodeVersion>${node-version}</nodeVersion>
+          <npmVersion>${npm-version}</npmVersion>
+          <workingDirectory>src/main/web/</workingDirectory>
+        </configuration>
+        <executions>
+
+          <execution>
+            <id>install node and npm</id>
+            <goals>
+              <goal>install-node-and-npm</goal>
+            </goals>
+          </execution>
+
+          <execution>
+            <id>npm install</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+          </execution>
+
+          <execution>
+            <id>npm build-prod</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>run build:prod</arguments>
+            </configuration>
+            <phase>generate-resources</phase>
+          </execution>
+
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
