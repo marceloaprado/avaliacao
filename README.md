@@ -142,8 +142,8 @@ Felizmente, as duas aplicações, tanto back-end quanto front-end já estão con
 Após instalar o Docker e a JDK do Java 8, precisamos inicializar o container do PostgreSQL. Faremos da seguinte maneira:
 
 - Abra o terminal ou o prompt de comando no diretório do arquivo `exercicio5-api/src/main/resources/environment`
-- Execute o seguinte comando: `docker-compose up`
-No console, serão exibidos os logs do Postgres sendo iniciado. Caso não queira manter o terminal aberto, é possível usar a o comando `docker-compose up -d`.
+- Execute o seguinte comando: `docker-compose up`.
+No console, serão exibidos os logs do Postgres sendo iniciado. Caso não queira manter o terminal aberto, é possível usar o comando `docker-compose up -d`.
 - Agora, basta compilar o projeto utilizando o seguinte comando do Maven: `mvn clean install` .  Assim, o *jar* da aplicação será criado na pasta `target` do projeto `exemplo5-api` e o mesmo pode ser executado através do comando:  `java -jar VeiculosAPI.jar`.
 - O passo anterior pode ser replicado na sua IDE de preferência também.
 
