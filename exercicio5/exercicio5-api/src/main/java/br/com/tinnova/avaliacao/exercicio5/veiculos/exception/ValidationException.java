@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
+ * Classe de exceção para validações de regras de negócio
  * 
  * @author Marcelo Alves Prado
  * 

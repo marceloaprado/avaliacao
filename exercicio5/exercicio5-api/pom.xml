@@ -11,7 +11,7 @@
 
 	<artifactId>exercicio5-api</artifactId>
 	<name>exercicio5-api</name>
-	<description>API Rest para o gerenciamento de veículos</description>
+	<description>API Rest para o gerenciamento de veiculos</description>
 	<packaging>jar</packaging>
 
 	<properties>

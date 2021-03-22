@@ -4,12 +4,14 @@ import java.time.LocalDate;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import io.swagger.annotations.ApiParam;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
+ * Filtro de busca personalizado para consultar veículos
  * 
  * @author Marcelo Alves Prado
  * 
@@ -20,18 +22,25 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FindVehicleFilterRequest {
 
+	@ApiParam("Nome do veículo")
 	private String vehicle;
 
+	@ApiParam("Marca do veículo")
 	private String brand;
 
+	@ApiParam("Ano de fabricação do veículo")
 	private Integer year;
 
+	@ApiParam("Descrição do veículo")
 	private String description;
 
+	@ApiParam("Flag de veículo vendido")
 	private Boolean isSold;
 		
+	@ApiParam("Inicío do intervalo de data de cadastro do veículo no sistema")
 	private LocalDate startCreatedInterval;	
 	
+	@ApiParam("Final do intervalo de data de cadastro do veículo no sistema")
 	private LocalDate endCreatedInterval;
 	
 	public void setVeiculo(String vehicle) {

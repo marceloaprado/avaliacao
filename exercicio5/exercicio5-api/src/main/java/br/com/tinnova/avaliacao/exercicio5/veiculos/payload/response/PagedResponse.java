@@ -7,6 +7,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Classe para resposta de consultas paginadas
+ * 
+ * @author Marcelo Alves Prado
+ * 
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

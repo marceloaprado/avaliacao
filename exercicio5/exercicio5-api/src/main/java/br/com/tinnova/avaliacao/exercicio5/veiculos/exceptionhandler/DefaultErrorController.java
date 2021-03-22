@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * Controller para o tratamento de erros inesperados não tratados no Spring
+ * 
  * 
  * @author Marcelo Alves Prado
  * 

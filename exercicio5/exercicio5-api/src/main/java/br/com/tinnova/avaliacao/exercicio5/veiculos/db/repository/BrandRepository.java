@@ -8,6 +8,13 @@ import org.springframework.stereotype.Repository;
 
 import br.com.tinnova.avaliacao.exercicio5.veiculos.db.entity.Brand;
 
+/**
+ * Interface de acesso à persistência de dados da entidade Marca
+ * 
+ * 
+ * @author Marcelo Alves Prado
+ * 
+ */
 @Repository
 public interface BrandRepository extends JpaRepository<Brand, Long>, PagingAndSortingRepository<Brand, Long> {
 	Page<Brand> findByBrandContainingIgnoreCase(String search, Pageable pageable);

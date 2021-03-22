@@ -18,6 +18,12 @@ import br.com.tinnova.avaliacao.exercicio5.veiculos.exception.ResourceNotFoundEx
 import br.com.tinnova.avaliacao.exercicio5.veiculos.mapper.VehicleMapper;
 import br.com.tinnova.avaliacao.exercicio5.veiculos.payload.request.FindVehicleFilterRequest;
 
+/**
+ * Serviço contendo as funcionalidades e regras de negócio relacionadas a Veículos
+ * 
+ * @author Marcelo Alves Prado
+ * 
+ */
 @Service
 public class VehicleService {
 

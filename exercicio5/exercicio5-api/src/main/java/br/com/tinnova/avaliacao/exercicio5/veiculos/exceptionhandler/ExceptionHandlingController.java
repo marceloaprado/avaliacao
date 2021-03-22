@@ -21,6 +21,7 @@ import br.com.tinnova.avaliacao.exercicio5.veiculos.exception.ValidationExceptio
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * Controller para o tratamento de erros esperados pela aplicação
  * 
  * @author Marcelo Alves Prado
  * 

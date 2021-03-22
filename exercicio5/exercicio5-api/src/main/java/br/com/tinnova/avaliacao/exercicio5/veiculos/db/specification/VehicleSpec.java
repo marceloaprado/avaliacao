@@ -17,6 +17,13 @@ import br.com.tinnova.avaliacao.exercicio5.veiculos.payload.request.FindVehicleF
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+/**
+ * Classe responsável por criar filtros de acesso específicos de algumas
+ * propriedades para consulta de veículos
+ * 
+ * @author Marcelo Alves Prado
+ * 
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 public class VehicleSpec implements Specification<Vehicle> {

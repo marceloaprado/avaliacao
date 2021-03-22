@@ -14,6 +14,12 @@ import br.com.tinnova.avaliacao.exercicio5.veiculos.db.repository.BrandRepositor
 import br.com.tinnova.avaliacao.exercicio5.veiculos.exception.ResourceNotFoundException;
 import br.com.tinnova.avaliacao.exercicio5.veiculos.util.AppConstants;
 
+/**
+ * Serviço contendo as funcionalidades e regras de negócio relacionadas a Marcas
+ * 
+ * @author Marcelo Alves Prado
+ * 
+ */
 @Service
 public class BrandService {
 	

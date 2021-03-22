@@ -23,6 +23,8 @@ import com.zaxxer.hikari.HikariDataSource;
 import br.com.tinnova.avaliacao.exercicio5.veiculos.config.ApplicationDatabaseConfig;
 
 /**
+ * Classe com as configurações de conexão com o banco de dados e propriedades de
+ * persistência dos dados
  * 
  * @author Marcelo Alves Prado
  * 
@@ -31,55 +33,53 @@ import br.com.tinnova.avaliacao.exercicio5.veiculos.config.ApplicationDatabaseCo
 @EnableTransactionManagement
 @EnableJpaAuditing
 @EnableJpaRepositories(//
-        basePackages = "br.com.tinnova.avaliacao.exercicio5.veiculos.db", //
-        entityManagerFactoryRef = "applicationEntityManager", //
-        transactionManagerRef = "applicationTransactionManager")
+		basePackages = "br.com.tinnova.avaliacao.exercicio5.veiculos.db", //
+		entityManagerFactoryRef = "applicationEntityManager", //
+		transactionManagerRef = "applicationTransactionManager")
 public class ApplicationDataSourceConfig extends HikariConfig {
-	
+
 	@Autowired
 	private ApplicationDatabaseConfig databaseConfig;
-	
-    /**
-     * Factory para criação do Data Source
-     *
-     * @return
-     */
+
+	/**
+	 * Factory para criação do Data Source
+	 *
+	 * @return
+	 */
 	@Primary
-    @Bean(name = "applicationDataSource")
-    public DataSource dataSource() {
+	@Bean(name = "applicationDataSource")
+	public DataSource dataSource() {
 		this.setJdbcUrl(databaseConfig.getJdbcUrl());
-		this.setDriverClassName(databaseConfig.getDriverClassName());		
-        return new HikariDataSource(this);
-    }
+		this.setDriverClassName(databaseConfig.getDriverClassName());
+		return new HikariDataSource(this);
+	}
 
-    /**
-     * Factory para criação do Entity Manager
-     *
-     * @param builder
-     * @return
-     */
+	/**
+	 * Factory para criação do Entity Manager
+	 *
+	 * @param builder
+	 * @return
+	 */
 	@Primary
-    @PersistenceContext(unitName = "applicationPersistenceContext")
-    @Bean(name = "applicationEntityManager")    
-    public LocalContainerEntityManagerFactoryBean applicationEntityManager(
-            EntityManagerFactoryBuilder builder) {
-        return builder
-    		.dataSource(dataSource()) //
-    		.persistenceUnit("applicationPersistenceContext") //
-            .packages("br.com.tinnova.avaliacao.exercicio5.veiculos.db.entity") //
-            .build();
-    }
+	@PersistenceContext(unitName = "applicationPersistenceContext")
+	@Bean(name = "applicationEntityManager")
+	public LocalContainerEntityManagerFactoryBean applicationEntityManager(EntityManagerFactoryBuilder builder) {
+		return builder.dataSource(dataSource()) //
+				.persistenceUnit("applicationPersistenceContext") //
+				.packages("br.com.tinnova.avaliacao.exercicio5.veiculos.db.entity") //
+				.build();
+	}
 
-    /**
-     * Factory para criação do Transaction Manager
-     *
-     * @param entity manager
-     * @return
-     */
+	/**
+	 * Factory para criação do Transaction Manager
+	 *
+	 * @param entity manager
+	 * @return
+	 */
 	@Primary
-    @Bean(name = "applicationTransactionManager")
-    public PlatformTransactionManager applicationTransactionManager(
-            @Qualifier("applicationEntityManager") EntityManagerFactory em) {
-        return new JpaTransactionManager(em);
-    }
+	@Bean(name = "applicationTransactionManager")
+	public PlatformTransactionManager applicationTransactionManager(
+			@Qualifier("applicationEntityManager") EntityManagerFactory em) {
+		return new JpaTransactionManager(em);
+	}
 }

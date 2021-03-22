@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import lombok.Getter;
 
 /**
+ * Classe de exceção para recursos não encontrados
  * 
  * @author Marcelo Alves Prado
  * 

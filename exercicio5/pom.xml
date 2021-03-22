@@ -12,7 +12,7 @@
 	<groupId>br.com.tinnova.avaliacao.exercicio5</groupId>
 	<artifactId>exercicio5</artifactId>
 	<name>exercicio5</name>
-	<description>Aplicação backend Spring Boot com Angular para gerenciamento de veículos</description>
+	<description>Aplicacao backend Spring Boot com Angular para gerenciamento de veiculos</description>
 	<packaging>pom</packaging>
 	
 	<modules>

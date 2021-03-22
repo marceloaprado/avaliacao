@@ -18,9 +18,13 @@ import br.com.tinnova.avaliacao.exercicio5.veiculos.dto.BrandDTO;
 import br.com.tinnova.avaliacao.exercicio5.veiculos.mapper.BrandMapper;
 import br.com.tinnova.avaliacao.exercicio5.veiculos.payload.response.PagedResponse;
 import br.com.tinnova.avaliacao.exercicio5.veiculos.service.BrandService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import lombok.extern.log4j.Log4j2;
 
 /**
+ * Controller responsável pelas operações de CRUD relacionadas a Marcas de
+ * veículos.
  * 
  * @author Marcelo Alves Prado
  * 
@@ -33,22 +37,24 @@ public class BrandController {
 
 	@Autowired
 	private BrandService brandService;
-	
+
 	@Autowired
 	private BrandMapper brandMapper;
-	
+
+	@ApiOperation(value = "Lista todas as marcas de forma paginada conforme o filtro informado.")
 	@GetMapping
-	public ResponseEntity<?> getAllBrands(@RequestParam(required = false) Map<String, String> filters) {		
+	public ResponseEntity<PagedResponse<BrandDTO>> getAllBrands(
+			@ApiParam("Filtros permitidos: ['page': int], ['size': int] e ['search': string]") @RequestParam(required = false) Map<String, String> filters) {
 		log.info("Operation getAllBrands: search {}", filters.get("search"));
-		
+
 		Page<Brand> brandPages = this.brandService.getBrandByFilter(filters);
-		
+
 		List<BrandDTO> brandsDTO = brandPages.getContent().stream().map(brandMapper::entityToDto)
 				.collect(Collectors.toList());
 
 		PagedResponse<BrandDTO> pagedResponse = new PagedResponse<>(brandsDTO, brandPages.getNumber(),
 				brandPages.getSize(), brandPages.getTotalElements(), brandPages.getTotalPages(), brandPages.isLast());
-		
+
 		return ResponseEntity.ok(pagedResponse);
 	}
 }

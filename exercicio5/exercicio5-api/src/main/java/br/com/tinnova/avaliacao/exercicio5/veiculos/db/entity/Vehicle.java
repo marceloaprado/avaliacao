@@ -23,6 +23,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * Classe de mapeamento da entidade Veículo
  * 
  * @author Marcelo Alves Prado
  */

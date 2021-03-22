@@ -13,6 +13,8 @@ import lombok.NoArgsConstructor;
 
 /**
  * 
+ * Classe DTO para a entidade Marca
+ * 
  * @author Marcelo Alves Prado
  * 
  */

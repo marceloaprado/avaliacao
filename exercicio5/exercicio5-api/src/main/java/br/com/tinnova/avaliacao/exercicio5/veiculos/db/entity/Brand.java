@@ -18,6 +18,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * Classe de mapeamento da entidade Marca 
  * 
  * @author Marcelo Alves Prado
  */

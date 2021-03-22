@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
+ * Classe de propriedades de configuração do banco de dados.
  * 
  * @author Marcelo Alves Prado
  * 
