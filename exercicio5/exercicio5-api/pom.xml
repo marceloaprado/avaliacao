@@ -126,6 +126,24 @@
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
 	</dependencies>
+	
+	<profiles>
+		<profile>
+			<id>loc</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>				
+			</activation>
+			<properties>
+				<activatedProperties>loc</activatedProperties>
+			</properties>
+		</profile>		
+		<profile>
+			<id>prd</id>
+			<properties>
+				<activatedProperties>prd</activatedProperties>
+			</properties>
+		</profile>
+	</profiles>
 
 	<build>
 		<finalName>VeiculosAPI</finalName>
