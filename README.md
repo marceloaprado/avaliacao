@@ -152,3 +152,7 @@ No console, serão exibidos os logs do Postgres sendo iniciado. Caso não queira
 Feito isso, é possível acessar aplicação localmente no endereço http://localhost:8080/.
 
 A resolução deste desafio encontra-se no projeto [**exercicio5**](https://github.com/marceloaprado/avaliacao/tree/main/exercicio5)
+
+
+**Extra - Deploy no Heroku**
+Para facilitar a visualização e o uso da aplicação, ela foi implantada no Heroku e pode ser acessada através do link: https://avaliacao-desafios.herokuapp.com/
