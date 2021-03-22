@@ -116,7 +116,9 @@ tudo pronto e configurado no nosso projeto, e precisaremos fazer o
 mínimo de alterações antes de rodar a aplicação. Na verdade, não
 precisaríamos alterar absolutamente nada, mas como estamos usando um banco de dados externo, precisamos configurar o acesso a este banco.
 
-Comentando com mais detalhes sobre o acesso externo ao banco de dados Postgres, foi incluído na API um arquivo chamado `docker-compose.yaml`. Esse arquivo contém instruções para que o [**Docker**](https://www.docker.com/) faça a inicialização de uma imagem do [**PostgreSQL**](https://www.postgresql.org/), já com a versão e variáveis como usuário, senha e banco de dados padrão previamente configurados. 
+Comentando com mais detalhes sobre o acesso externo ao banco de dados Postgres, foi incluído na API um arquivo chamado `docker-compose.yaml`. Esse arquivo contém instruções para que o [**Docker**](https://www.docker.com/) faça a inicialização de uma imagem do [**PostgreSQL**](https://www.postgresql.org/), já com a versão e variáveis como usuário, senha e banco de dados padrão previamente configurados.
+
+E para finalizar esse combo poderoso de tecnologias, temos a biblioteca [**Swagger**](https://swagger.io/), que nos permite documentar a API com o mínimo de configurações necessárias. No final, com a aplicação rodando, é possível acessar a URL http://localhost:8080/swagger-ui.html e ver a mágica acontecer!
 
 **As tecnologias para front-end**
 
